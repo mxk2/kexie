@@ -36,6 +36,8 @@ a:hover { color: #2B81E8; }
 .color-0E6 { color: #45C0E6 !important; }
 .color-FF0 { color: #FF0000 !important; }
 .color-6CB { color: #6CBE42 !important; }
+.color-BAB { color: #BABABA !important; }
+.color-FF9 { color: #FF9A03 !important; }
 
 /*font*/
 .font-wy { font-family: "微软雅黑" !important; }
@@ -45,8 +47,10 @@ a:hover { color: #2B81E8; }
 .size-14 { font-size: 14px !important; }
 .size-16 { font-size: 16px !important; }
 .size-18 { font-size: 18px !important; }
+.size-20 { font-size: 20px !important; }
 .size-22 { font-size: 22px !important; }
 .size-24 { font-size: 24px !important; }
+.size-32 { font-size: 32px !important; }
 
 /*bg*/
 .bg-F5F { background: #F5F5F5; }
@@ -64,13 +68,15 @@ a:hover { color: #2B81E8; }
 .mt-10 { margin-top: -10px; }
 .m0 { margin: 0 !important; }
 .mt5 { margin-top: 5px; }
+.mt7 { margin-top: 7px; }
 .mt10 { margin-top: 10px; }
 .mt13 { margin-top: 13px; }
 .mt15 { margin-top: 15px; }
 .mt16 { margin-top: 16px; }
-.mt20 { margin-top: 20px; }
+.mt20 { margin-top: 20px !important; }
 .mt25 { margin-top: 25px; }
 .mt28 { margin-top: 28px; }
+.mt30 { margin-top: 30px !important; }
 .mt31 { margin-top: 31px; }
 .mt35 { margin-top: 35px; }
 .mt40 { margin-top: 40px; }
@@ -89,6 +95,7 @@ a:hover { color: #2B81E8; }
 .ml30 { margin-left: 30px !important; }
 .ml33 { margin-left: 33px; }
 .ml35 { margin-left: 35px; }
+.ml50 { margin-left: 50px !important; }
 .ml55 { margin-left: 55px !important; }
 .ml90 { margin-left: 90px; }
 .p-0-17 { padding: 0 17px; }
@@ -281,7 +288,7 @@ a:hover { color: #2B81E8; }
 .box-qcy .body { width: 260px; color: #666; font-size: 14px; line-height: 28px; padding-left: 14px; margin-top: 15px; }
 .box-qcy .body p { margin: 0; line-height: 26px; font-size: 14px; color: #666; font-family: "宋体"; }
 .circle-80 { display: inline-block; padding: 20px; line-height: 20px; width: 80px; height: 80px; text-align: center; font-size: 18px; color: #fff; font-family: "微软雅黑"; font-weight: bold; background: url(../images/circle-blue-80.fw.png); text-decoration: none; }
-.circle-80:hover { bold; background: url(../images/circle-orange-80.fw.png); color: #fff; text-decoration: none; }
+.circle-80:hover { background: url(../images/circle-orange-80.fw.png); color: #fff; text-decoration: none; }
 .box-qcy .footer { margin: 50px 13px 0 0; }
 
 /*搜索*/
@@ -327,3 +334,30 @@ a:hover { color: #2B81E8; }
 .box-atricle-link span { font-size: 14px; color: #999; font-family: "宋体"; }
 .box-atricle-link a { margin-left: 15px; font-size: 14px; color: #000; }
 .box-atricle-link a:hover { color: #3A79C4; }
+
+/*活动类详细页*/
+.slide-hd .btn-left,
+.slide-hd .btn-right { opacity: 0.7; filter: alpha(opacity:70); position: relative; z-index: 2; }
+.slide-hd .btn-left:hover,
+.slide-hd .btn-right:hover { opacity: 1; filter: alpha(opacity:100); }
+.slide-hd .body { position: relative; margin: 0 40px; overflow: hidden; height: 72px; }
+.slide-hd .body ul { position: absolute; z-index: 1; top: 0; left: 0; }
+.slide-hd .body li { margin: 0 9px; padding: 5px; border: 1px solid #ccc; }
+.slide-hd .body li.selected { border: 1px solid #FF9900; }
+.box-zjr { width: 465px; }
+.span-blue { color: #3A79C4; border: 1px solid #3A79C4; padding: 4px 18px; background: #fff; }
+.slide-zcr .body { height: 130px; }
+.slide-zcr .body li { padding: 10px; border: none; }
+.slide-zcr .body li div { border-radius: 50px; overflow: hidden; behavior: url(../css/ie-css3.htc); }
+.slide-zcr .body li p { margin: 5px 0 0 0; color: #3A79C4; font-size: 14px; text-align: center; }
+.slide-zcr .btn-left,
+.slide-zcr .btn-right { margin-top: 40px; }
+.btn-wybm { display: inline-block; height: 50px; line-height: 50px; color: #fff; background: #3A79C4; padding: 0 40px; text-decoration: none; }
+.btn-wybm:hover { color: #fff; text-decoration: none; background: #45C1E7; }
+.h2-nrjs { margin: 0; line-height: 40px; font-size: 22px; font-family: "微软雅黑"; border-bottom: 1px dashed #ccc; }
+.p-indent { text-indent: 2em; }
+.p-nrjs { margin: 0; line-height: 26px; }
+.box-yhpl { padding: 20px 30px; border-bottom: 1px dashed #ccc; }
+.box-yhpl .color-BAB { font-family: Arial; margin-left: 15px; }
+.textarea-pingfen { padding: 1em; height: 155px; background: #F9F9F9; }
+.btn-pinglun { padding: 3px 26px !important; }
