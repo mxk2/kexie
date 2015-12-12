@@ -113,3 +113,49 @@ $(document).ready(function() {
 		});
 	});
 });
+var GLOBAL = GLOBAL || {};
+GLOBAL.Methods = GLOBAL.Methods || {};
+//事件绑定
+GLOBAL.Methods.eventUtil = {
+	addHandler: function(element, type, handler) {
+		if (element.addEventListener) {
+			element.addEventListener(type, handler, false);
+		} else if (element.attachEvent) {
+			element.attachEvent("on" + type, handler);
+		} else {
+			element["on" + type] = handler;
+		}
+	},
+	removeHandler: function() {
+		if (element.removeEventListener) {
+			element.removeEventListener(type, handler, false);
+		} else if (element.deathEvent) {
+			element.deathEvent("on" + type, handler);
+		} else {
+			element["on" + type] = null;
+		}
+	}
+};
+//回到顶部
+GLOBAL.returnTop = function() {
+	var sBack = '<div id="returnBack"></div>';
+	$("body").append(sBack);
+	var $back = $("#returnBack");
+	$back.bind("click", function() {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 200, function() {
+			$back.fadeOut(500);
+		});
+	});
+
+	GLOBAL.Methods.eventUtil.addHandler(window, "scroll", function() {
+		var top = document.documentElement.scrollTop || document.body.scrollTop;;
+		if (top > 0) {
+			$back.fadeIn(500);
+		} else {
+			$back.fadeOut(500);
+		}
+	});
+};
+GLOBAL.returnTop();
