@@ -23,7 +23,7 @@ $(document).ready(function() {
 	});
 	//全部
 	$("body").on("click", ".list-quanbu li a", function() {
-		$(this).closest("li").addClass("active").siblings(".active").removeClass("active");
+		$(this).closest("li").addClass("active").siblings(".active").not(".fr").removeClass("active");
 	});
 	//checkbox
 	$(".checkbox-custom :checkbox").each(function() {
