@@ -407,7 +407,7 @@ a:hover { color: #2B81E8; }
 .btn-pinglun { padding: 3px 26px !important; }
 
 /*新首页*/
-.body-index { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg-body.png); background-size: 100% }
+.body-index { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg-body.png) no-repeat; background-size: 111% }
 .body-index .input-search { width: 665px; margin: 0 auto; border: 1px solid #fff; }
 .body-index .input-search .form-control { width: 510px; height: 46px; border: none; }
 .body-index .input-search .form-control:focus { box-shadow: none; }
@@ -445,8 +445,8 @@ a:hover { color: #2B81E8; }
 .list-akx li a .bg { position: absolute; bottom: 0; left: 0; width: 100%; height: 40px; background: #000; opacity: 0.7; filter: alpha(opacity:70); }
 .list-akx li a p { position: absolute; bottom: 0; left: 0; width: 100%; padding-top: 0.6em; height: 40px; line-height: 40px; color: #fff; font-size: 14px; text-align: center; }
 .box-yunbanshi { padding-top: 15px; height: 90px; border-bottom: 1px solid #e2e2e2; }
-.box-yunbanshi .item-1 { width: 66px; }
-.box-yunbanshi .item-2 { width: 158px; line-height: 58px; font-size: 18px; color: #333; font-family: "微软雅黑"; }
+.box-yunbanshi .item-1 { width: 55px; height:55px; border-radius:30px; line-height:55px; text-align:center; color:#fff; font-size:30px; font-weight:bold; font-family: "微软雅黑";}
+.box-yunbanshi .item-2 { margin-left:10px; width: 158px; line-height: 58px; font-size: 18px; color: #333; font-family: "微软雅黑"; }
 .box-yunbanshi .item-3 .title { height: 33px; line-height: 57px; font-size: 14px; }
 .box-yunbanshi .item-3 { width: 373px; }
 .box-yunbanshi .item-4 a { float: left; width: 96px; height: 54px; text-align: center; text-decoration: none; }
