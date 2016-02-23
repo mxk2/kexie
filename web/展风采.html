@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -310,14 +309,31 @@
 	<script src="../js/main.js"></script>
 	<script>
 		$(function(){
-	var $container = $('#masonry');
-	$container.imagesLoaded( function(){
-		$container.masonry({
-			itemSelector : '.box',
-			gutterWidth : 20,
-			isAnimated: true,
+			var $container = $('#masonry');
+			$container.imagesLoaded( function(){
+				$container.masonry({
+					itemSelector : '.box',
+					gutterWidth : 20,
+					isAnimated: true,
+				});
+			});
+			setInterval(function(){
+				var colorArr = ['bg-FF6', 'bg-33c', 'bg-339'];
+				var selectColor = colorArr[parseInt(Math.random() * 3)];
+				var $container = $('#masonry');
+				var $items = $container.find(".box");
+				var length = $items.length;
+				//需要替换的html
+				var shtml = '<a href="#"><img src="../images/zfc-1.fw.png"><div><h2>金涌</h2><p>中国科学院院士</p><p>技术科学部</p></div></a>';
+				$items.eq(parseInt(Math.random() * length)).fadeOut().empty().html(shtml).removeClass().addClass("box " + selectColor).slideDown();
+				$container.imagesLoaded( function(){
+					$container.masonry({
+						itemSelector : '.box',
+						gutterWidth : 20,
+						isAnimated: true,
+					});
+				});
+			}, 3000);
 		});
-	});
-});
 	</script>
 </html>
