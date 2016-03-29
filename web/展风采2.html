@@ -164,8 +164,8 @@ var m3D = function () {
 		if ((this.canvas && this.srcImg.complete) || this.img.complete) {
 			if (this.canvas) {
 				/* ---- canvas version ---- */
-				this.w = this.srcImg.width;
-				this.h = this.srcImg.height;
+				this.w = this.srcImg.width/5;
+				this.h = this.srcImg.height/5;
 				this.img.width = this.w;
 				this.img.height = this.h;
 				var context = this.img.getContext("2d");
@@ -360,32 +360,31 @@ var m3D = function () {
 		<!-- header end -->
 		<!-- content start -->
         
-		<div id="screen">
-	<div id="command">
-		<div id="bar"></div>
-	</div>
-	<div id="urlInfo"></div>
-</div>
+		<div id="container">
+			<div id="screen">
+				<div id="command">
+					<div id="bar"></div>
+				</div>
+				<div id="urlInfo"></div>
+			</div>
+		</div>
 
 <script type="text/javascript">
 /* ==== start script ==== */
 setTimeout(function() {
 	m3D.init(
 		[ 
-			{ src: '1.png', url: '#', title: '', color: '#fff' },
-			{ src: '2.png', url: '#', title: '', color: '#fff' },
-			{ src: '3.png', url: '#', title: '', color: '#fff' },
-			{ src: '4.png', url: '#', title: '', color: '#fff' },
-			{ src: '5.png', url: '#', title: '', color: '#fff' },
-			{ src: '6.png', url: '#', title: '', color: '#fff' },
-			{ src: '7.png', url: '#', title: '', color: '#fff' },
-			{ src: '8.png', url: '#', title: '', color: '#fff' },
-			{ src: '9.png', url: '#', title: '', color: '#fff' },
-			{ src: '10.png', url: '#', title: '', color: '#fff' }
-		
-			
-			
-			]
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' }			
+		]
 	);
 }, 1000);
 </script>
@@ -413,4 +412,9 @@ setTimeout(function() {
 	<script src="../js/lib/jquery-1.11.3.min.js"></script>
 	<script src="../js/lib/bootstrap.min.js"></script>
 	<script src="../js/main.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#container").height($("#screen").height());
+		});
+	</script>
 </html>
