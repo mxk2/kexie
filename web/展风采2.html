@@ -10,7 +10,7 @@
 /* screen */
 #screen{position: absolute;width:100%;height:100%;background:#2B5891;overflow:hidden;}
 #screen img, canvas{position:absolute;left:-9999px;cursor:pointer;image-rendering:optimizeSpeed; z-index:200; border:#ccc solid 5px;}
-#screen .href{border:#fff solid 15px;}
+#screen .href{border:5px solid #ccc;}
 #screen .fog{position:absolute;background:#fff;opacity:0.1;filter:alpha(opacity=10);}
 #command{position:absolute;left:1em;top:1em;width:100%;z-index:30000;}
 #bar{position:relative;left:1em;top:1em;height:160px;}
@@ -92,7 +92,7 @@ var m3D = function () {
 						top.location.href = this.diapo.url;
 					} else {
 						/* ---- target positions ---- */
-						camera.tz = this.diapo.z - camera.fov;
+						camera.tz = this.diapo.z - camera.fov ? this.diapo.z - camera.fov : 1;
 						camera.tx = this.diapo.x;
 						camera.ty = this.diapo.y;
 						/* ---- disable previously selected img ---- */
@@ -150,7 +150,7 @@ var m3D = function () {
 			var h = this.h * p;
 			/* ---- HTML rendering ---- */
 			this.css.left   = Math.round(nw + x * p - w * .5) + 'px';
-			this.css.top    = Math.round(nh + y * p - h * .5) + 'px';  
+			this.css.top    = Math.round(nh + y * p - h * .5) + 'px';
 			this.css.width  = Math.round(w) + 'px';
 			this.css.height = Math.round(h) + 'px';
 			this.css.zIndex = this.zi - Math.round(z);
@@ -205,7 +205,7 @@ var m3D = function () {
 		urlInfo = document.getElementById("urlInfo");
 		resize();
 		/* ---- loading images ---- */
-		var i = 0, 
+		var i = 0,
 		    o,
 			n = data.length;
 		while( o = data[i++] ) {
@@ -236,7 +236,7 @@ var m3D = function () {
 			if (!m) camera.tx = 0;
 		/* ---- y axis move ---- */
 		} else if (camera.ty) {
-			if (!camera.s) camera.setTarget(camera.y, camera.ty); 
+			if (!camera.s) camera.setTarget(camera.y, camera.ty);
 			var m = camera.tween('y');
 			if (!m) camera.ty = 0;
 		/* ---- z axis move ---- */
@@ -359,7 +359,7 @@ var m3D = function () {
 		</div>
 		<!-- header end -->
 		<!-- content start -->
-        
+
 		<div id="container">
 			<div id="screen">
 				<div id="command">
@@ -373,7 +373,7 @@ var m3D = function () {
 /* ==== start script ==== */
 setTimeout(function() {
 	m3D.init(
-		[ 
+		[
 			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
 			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
 			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
@@ -383,7 +383,7 @@ setTimeout(function() {
 			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
 			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
 			{ src: '17.jpg', url: '#', title: '', color: '#fff' },
-			{ src: '17.jpg', url: '#', title: '', color: '#fff' }			
+			{ src: '17.jpg', url: '#', title: '', color: '#fff' }
 		]
 	);
 }, 1000);
